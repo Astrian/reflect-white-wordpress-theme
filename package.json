@@ -1,0 +1,12 @@
+{
+  "name": "reflect-white-wordpress-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build-sass": "node-sass style.scss --output ./"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
