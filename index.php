@@ -1,13 +1,55 @@
 <?php get_header(); ?>
+<div class="container" id="category">
 <?php
-
 if ( have_posts() ) :
-	while ( have_posts() ) : the_post(); ?>
-
-        <!--h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-		<?php the_content() ?>
--->
-	
+  $i = 0;
+	while ( have_posts() ) : the_post();
+  if ($i == 0) {
+  ?>
+  <div class="article huge">
+    <div class="featureimg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+      <div class="row content">
+        <div class="col-md-2"></div>
+        <div class="col-md-10 main">
+          <div class="row">
+            <div class="col-md-10 post">
+              <div class="headline"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
+              <div class="subtitle"><?php the_excerpt() ?></div>
+              <div class="meta"><span class="time"><?php the_date() ?></span></div>
+              <div class="body">
+              <?php the_content('') ?>
+              </div>
+              <div class="bottom">
+                <a href="<?php the_permalink() ?>" class="continue float-right">
+                  继续阅读
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="otherposts row">
+      <?php
+      } else {
+      ?>
+        <div class="col-md-6">
+          <a href="<?php the_permalink() ?>" class="item">
+            <div class="article normal">
+              <div class="featureimg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+              <div class="articleinfo">
+                <div class="headline"><?php the_title() ?></div>
+                <div class="subtitle"><?php the_excerpt() ?></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      <?php
+      }
+      $i++;
+      ?>
+    
+      </div>
 	<?php endwhile;
 
 else :
@@ -16,4 +58,5 @@ else :
 endif;
 
 ?>
+</div>
 <?php get_footer(); ?>
