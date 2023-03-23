@@ -24,20 +24,26 @@ body {
   nav {
     display: flex;
     flex-wrap: wrap;
+    ul {
+      list-style: none;
+      display: flex;
+      padding-left: 0px;
+      margin-left: 0px;
+      li {
+        
+        padding: 0px 20px 0px 0px;
+        margin: 10px 0px 0px 0px;
+        font-size: 20px;
+        text-transform: uppercase;
 
-    .item {
-      padding: 0px 20px 0px 0px;
-      margin: 10px 0px 0px 0px;
-      font-size: 20px;
-      text-transform: uppercase;
+        a {
+          color: rgba(0, 0, 50, 0.3);
+          letter-spacing: 5px;
 
-      a {
-        color: rgba(0, 0, 50, 0.3);
-        letter-spacing: 5px;
-
-        &:hover {
-          text-decoration: none;
-          color: rgba(0, 0, 50, 0.6);
+          &:hover {
+            text-decoration: none;
+            color: rgba(0, 0, 50, 0.6);
+          }
         }
       }
     }
