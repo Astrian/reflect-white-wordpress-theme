@@ -7,7 +7,11 @@ if ( have_posts() ) :
   if ($i == 0) {
   ?>
   <div class="article huge">
-    <div class="featureimg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+    <?php if (get_the_post_thumbnail_url() != '') { ?>
+      <div class="featureimg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+    <?php } else { ?>
+      <div class="featureimg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/defaultfeaimg.jpg')"></div>
+    <?php } ?>
       <div class="row content">
         <div class="col-md-2"></div>
         <div class="col-md-10 main">
@@ -36,7 +40,11 @@ if ( have_posts() ) :
         <div class="col-md-6">
           <a href="<?php the_permalink() ?>" class="item">
             <div class="article normal">
-              <div class="featureimg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+              <?php if (get_the_post_thumbnail_url() != '') { ?>
+                <div class="featureimg" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
+              <?php } else { ?>
+                <div class="featureimg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/defaultfeaimg.jpg')"></div>
+              <?php } ?>
               <div class="articleinfo">
                 <div class="headline"><?php the_title() ?></div>
                 <div class="subtitle"><?php the_excerpt() ?></div>
