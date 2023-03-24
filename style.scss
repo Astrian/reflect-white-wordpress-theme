@@ -234,11 +234,13 @@ body {
   }
 
   .post {
-    hr {
-      width: 30%;
-      border: 0.5px solid rgba(0, 0, 0, 0.1);
-      margin-top: 60px;
-      margin-bottom: 60px;
+    .body {
+      hr {
+        width: 30%;
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
     }
   }
 }
@@ -343,6 +345,10 @@ a {
 .comment {
   h1 {
     font-size: 20px;
+  }
+  hr {
+    width: 100%;
+    margin: 40px 0px;
   }
 }
 
