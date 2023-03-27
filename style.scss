@@ -1015,5 +1015,22 @@ span.smallcaps {
     .comment-body {
       border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
     }
+    .comment-form {
+      input, textarea {
+        color: #c5c5c5;
+      }
+      .comment-notes {
+        #email-notes, .required-field-message {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.4);
+        }
+      }
+      input, textarea {
+        border-bottom: 1px solid rgb(130, 155, 161);
+        &:focus {
+          border-bottom: 1px solid rgb(64, 180, 212);
+        }
+      }
+    }
   }
 }
