@@ -30,10 +30,8 @@
               <div class="body">
                 <?php the_content('') ?>
               </div>
-              <div class="comment">
-                <hr>
+              
                 <?php comments_template() ?>
-              </div>
             </div>
           </div>
         </div>

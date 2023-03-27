@@ -342,13 +342,41 @@ a {
   }
 }
 
-.comment {
-  h1 {
-    font-size: 20px;
+.comment-area {
+  .comments-block-title {
+    font-size: 25px;
+    padding-bottom: 30px;
   }
   hr {
     width: 100%;
-    margin: 40px 0px;
+    margin: 20px 0px;
+  }
+  .single-comment{
+    display:flex;
+
+    .single-comment-avatar {
+      padding-right: 20px;
+      img.avatar {
+        border-radius: 50%;
+      }
+    }
+    
+    .single-comment-content {
+      .single-comment-meta {
+        display: flex;
+        flex-direction: column;
+        .single-comment-author {
+          font-weight: bold;
+        }
+        .single-comment-time {
+          color: rgba(0, 0, 0, 0.3);
+          font-size: 14px;
+        }
+      }
+      .single-comment-text {
+        margin-top: 5px;
+      }
+    }
   }
 }
 

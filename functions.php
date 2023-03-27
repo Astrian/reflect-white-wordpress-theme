@@ -12,4 +12,5 @@ function reflect_white_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'reflect_white_enqueue_scripts' );
 
 add_theme_support( 'post-thumbnails' );
+wp_enqueue_script( 'comment-reply' );
 ?>
